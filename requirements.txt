@@ -2,7 +2,6 @@
 django == 1.11
 djangorestframework
 djangorestframework_camel_case
-django-telegram-bot
 psycopg2
 
 
@@ -10,3 +9,8 @@ psycopg2
 bpython ~= 0.16
 ipdb ~= 0.10.1
 django-extensions ~= 1.7.4
+
+
+# TELEGRAM BOT
+python-telegram-bot
+requests
