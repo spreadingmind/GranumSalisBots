@@ -7,21 +7,31 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.User'
+
+SECRET_WEBHOOK_PATH = 'secret'
+
 INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
+    'django.contrib.messages',
     'django.contrib.contenttypes',
     'django.contrib.auth',
+    'django.contrib.admin',
 
     'rest_framework',
     'django_extensions',
+
+    'apps.users',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -69,9 +79,6 @@ DATABASES = {
 
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
