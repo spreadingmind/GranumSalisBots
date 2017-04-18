@@ -1,16 +1,13 @@
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
-import requests
 import json
+
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import requests
 
 from local import TOKEN, ENDPOINT
 
 
-CONFIRMATION_TEXT = "OK!"
-
-
 def start(bot, update):
-    update.message.reply_text('Hello World!')
+    proceed(bot, update)
 
 
 def proceed(bot, update):
@@ -18,14 +15,10 @@ def proceed(bot, update):
     headers = {'content-type': 'application/json'}
     try:
         requests.post(ENDPOINT, data=json.dumps(update.to_dict()), headers=headers, timeout=5)
-    except Exception as e:
+    except requests.HTTPError as e:
         print(e)
-    update.message.reply_text(CONFIRMATION_TEXT)
-
 
 updater = Updater(TOKEN)
-
-
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(MessageHandler(Filters.all, proceed))
 
