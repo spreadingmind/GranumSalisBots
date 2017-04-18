@@ -1,8 +1,8 @@
-from django.views.generic import View
 from django.http import HttpResponse
+from rest_framework.views import APIView
 
 
-class WebhookView(View):
+class WebhookView(APIView):
     def post(self, request):
-        print(request)
+        print(request.data)
         return HttpResponse()
