@@ -7,6 +7,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.User'
+
 INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
@@ -15,6 +17,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_extensions',
+
+    'apps.users',
 ]
 
 MIDDLEWARE = [
