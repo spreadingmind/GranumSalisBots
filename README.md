@@ -7,7 +7,9 @@
 * create virtualenv + pip install -r requrements.txt
 * if using PyCharm to go Settings>Project>Project interpreter and select interpreter from created virtualenv
 * install PostgreSQL (https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04)
+
 choose any database and user name;
+
 (until section 'Install Django within a Virtual Environment')
 * create gs/settings/local.py for local configurations
 add configuration for local database:
