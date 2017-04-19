@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'apps.users',
+    'apps.bot',
 ]
 
 MIDDLEWARE_CLASSES = [
