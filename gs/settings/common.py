@@ -9,6 +9,8 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'users.User'
 
+SECRET_WEBHOOK_PATH = 'secret'
+
 INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
@@ -21,6 +23,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'apps.users',
+    'apps.bot',
 ]
 
 MIDDLEWARE_CLASSES = [

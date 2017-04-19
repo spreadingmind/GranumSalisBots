@@ -27,4 +27,10 @@ DATABASES = {
 
 * to check correctness of database run:
 - ./manage.py check
-- ./manage.py migrate
+- ./manage.py migrate             (to run database scripts - create tables and insert initial data)
+- ./manage.py createsuperuser     (to create user)
+- ./manage.py runserver           (to start up the application)
+* in web browser access   localhost:8000/    and log in as a recently created user    
+
+* add configuration of telegram bot into /bot/local.py
+* run webhook mock - python /bot/bot.py - now messages to that bot will get resent to ENDPOINT and trigger view
