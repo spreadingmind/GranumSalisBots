@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
     'apps.users',
     'apps.bot',
+    'gs',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -34,6 +35,10 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 ROOT_URLCONF = 'gs.urls'
