@@ -8,4 +8,5 @@ __pycache__
 node_modules
 cache
 media
-static
+gs/static/*
+!.gitkeep
