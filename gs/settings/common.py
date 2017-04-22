@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
     'apps.users',
     'apps.bot',
+    'gs',
 ]
 
 MIDDLEWARE_CLASSES = [
